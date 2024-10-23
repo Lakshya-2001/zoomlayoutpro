@@ -5,15 +5,48 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <com.lakshya.zoomlayout.ZoomLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical|horizontal"
+        app:alignment="left|top"
+        app:animationDuration="280"
+        app:flingEnabled="true"
+        app:hasClickableChildren="true"
+        app:horizontalPanEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxZoom="1"
+        app:maxZoomType="realZoom"
+        app:minZoom="0.3"
+        app:minZoomType="realZoom"
+        app:oneFingerScrollEnabled="true"
+        app:overPinchable="true"
+        app:overScrollHorizontal="true"
+        app:overScrollVertical="true"
+        app:scrollEnabled="true"
+        app:threeFingersScrollEnabled="true"
+        app:transformation="centerCrop"
 
+        app:transformationGravity="auto"
+        app:twoFingersScrollEnabled="true"
+
+        app:verticalPanEnabled="true"
+        app:zoomEnabled="true">
+
+        <TextView
+            android:layout_width="6000dp"
+            android:layout_height="4000dp"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.lakshya.zoomlayout.ZoomLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

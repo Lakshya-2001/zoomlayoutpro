@@ -42,7 +42,7 @@ publishing {
                   register<MavenPublication>("release") {
                            groupId = "com.github.Lakshya-2001"
                            artifactId = "zoomlayoutpro"
-                           version = "1.0.1"
+                           version = "1.0.4"
 
                            afterEvaluate {
                                     from(components["release"])

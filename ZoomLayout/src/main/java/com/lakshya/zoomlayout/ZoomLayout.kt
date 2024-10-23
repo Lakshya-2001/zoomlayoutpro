@@ -89,20 +89,6 @@ open class ZoomLayout private constructor(
         setMinZoom(minZoom, minZoomMode)
         setMaxZoom(maxZoom, maxZoomMode)
         setHasClickableChildren(hasChildren)
-         LOG.i("setHasClickableChildren:", "maximum zoom:", ""+maxZoom)
-viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-        override fun onGlobalLayout() {
-            if (childCount > 0) {
-                val child = getChildAt(0)
-                engine.setContentSize(child.width.toFloat(), child.height.toFloat())
-
-                // Trigger zoom to the maximum zoom level
-                   engine.moveTo(maxZoom, 0F,0F, true)  // 'true' for animated zoom  // 'true' for animated zoom
-
-                viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        }
-    })
         setWillNotDraw(false)
     }
 

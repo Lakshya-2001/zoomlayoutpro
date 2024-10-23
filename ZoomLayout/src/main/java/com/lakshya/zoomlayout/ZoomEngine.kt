@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Matrix
 import android.graphics.RectF
+import android.util.Log
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
@@ -98,6 +99,7 @@ constructor(context: Context) : ZoomApi {
             LOG.w("onMatrixSizeChanged: firstTime:", firstTime, "oldZoom:", oldZoom,
                     "transformation:", transformationType,
                     "transformationZoom:", zoomManager.transformationZoom)
+            Log.d(TAG, "onMatrixSizeChanged: "+getMaxZoom())
             stateController.makeIdle()
             if (firstTime) {
                 // Compute the transformation zoom for the first time, which means applying the transformation.
