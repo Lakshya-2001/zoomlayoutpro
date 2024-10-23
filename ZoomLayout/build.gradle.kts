@@ -53,9 +53,6 @@ publishing {
                   maven {
                            name = "zoomlayoutpro"
                            url = uri("https://maven.pkg.github.com/Lakshya-2001/zoomlayoutpro")
-                           credentials {
-//                                    username = (project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")).toString()
-//                                    password = (project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")).toString()
 
                            }
                   }
