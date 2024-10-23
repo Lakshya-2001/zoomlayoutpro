@@ -96,7 +96,7 @@ viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLay
                 engine.setContentSize(child.width.toFloat(), child.height.toFloat())
 
                 // Trigger zoom to the maximum zoom level
-                engine.setZoom(maxZoom, true)  // 'true' for animated zoom
+                   engine.moveTo(maxZoom, 0F,0F, true)  // 'true' for animated zoom  // 'true' for animated zoom
 
                 viewTreeObserver.removeOnGlobalLayoutListener(this)
             }
