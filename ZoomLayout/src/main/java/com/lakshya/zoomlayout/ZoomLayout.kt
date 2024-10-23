@@ -89,6 +89,7 @@ open class ZoomLayout private constructor(
         setMinZoom(minZoom, minZoomMode)
         setMaxZoom(maxZoom, maxZoomMode)
         setHasClickableChildren(hasChildren)
+         LOG.i("setHasClickableChildren:", "maximum zoom:", ""+maxZoom)
 viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
             if (childCount > 0) {
