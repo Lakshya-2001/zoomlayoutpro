@@ -104,7 +104,7 @@ constructor(context: Context) : ZoomApi {
                 // Then zoom to this value so we are left with @Zoom=1 and can apply the zoom boundaries.
                 zoomManager.transformationZoom = computeTransformationZoom()
                 matrixController.applyUpdate {
-                    zoomTo(zoomManager.transformationZoom, false)
+                    zoomTo(getMaxZoom(), false)
                     notify = false
                 }
                 // Apply the transformation pan through the transformation gravity.

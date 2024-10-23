@@ -54,7 +54,6 @@ publishing {
                            name = "zoomlayoutpro"
                            url = uri("https://maven.pkg.github.com/Lakshya-2001/zoomlayoutpro")
 
-                           }
                   }
          }
 }
